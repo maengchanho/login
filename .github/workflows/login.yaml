@@ -66,14 +66,14 @@ jobs:
       # Build the Docker image
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/yeongkyukang/login_service:latest .
+          docker build -t ghcr.io/maengchanho/login-service:latest .
 
       # Push the Docker image to GHCR
       - name: Push Docker image to GHCR
         run: |
-          docker push ghcr.io/yeongkyukang/login_service:latest
+          docker push ghcr.io/maengchanho/login-service:latest
 
       # Verify image push
       - name: Verify image
         run: |
-          docker pull ghcr.io/yeongkyukang/login_service:latest
+          docker pull ghcr.io/maengchanho/login-service:latest
