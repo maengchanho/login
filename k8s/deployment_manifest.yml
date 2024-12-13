@@ -25,7 +25,5 @@ spec:
             limits:
               cpu: "1"
               memory: "512Mi"
-      nodeSelector:
-        kubernetes.io/hostname: kube-node2
       imagePullSecrets:
         - name: ghcr-secrets
