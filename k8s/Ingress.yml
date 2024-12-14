@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: web-service-ingress
+  namespace: login-service
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
@@ -13,20 +14,20 @@ spec:
           pathType: Prefix
           backend:
             service:
-              name: login-service.login-service.svc.cluster.local
+              name: login-service
               port:
                 number: 5006
         - path: /login
           pathType: Prefix
           backend:
             service:
-              name: login-service.login-service.svc.cluster.local
+              name: login-service
               port:
                 number: 5006
         - path: /login
           pathType: Prefix
           backend:
             service:
-              name: login-service.login-service.svc.cluster.local
+              name: login-service
               port:
                 number: 5006
