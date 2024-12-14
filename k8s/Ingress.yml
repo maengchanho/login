@@ -13,20 +13,20 @@ spec:
           pathType: Prefix
           backend:
             service:
-              name: login-service
+              name: login-service-node1
               port:
                 number: 5006
         - path: /kube-node2
           pathType: Prefix
           backend:
             service:
-              name: login-service
+              name: login-service-node2
               port:
                 number: 5006
         - path: /kube-node3
           pathType: Prefix
           backend:
             service:
-              name: login-service
+              name: login-service-node3
               port:
                 number: 5006
