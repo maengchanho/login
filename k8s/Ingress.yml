@@ -13,20 +13,20 @@ spec:
           pathType: Prefix
           backend:
             service:
-              name: login-service
+              name: login-service.login-service.svc.cluster.local
               port:
                 number: 5006
         - path: /login
           pathType: Prefix
           backend:
             service:
-              name: login-service
+              name: login-service.login-service.svc.cluster.local
               port:
                 number: 5006
         - path: /login
           pathType: Prefix
           backend:
             service:
-              name: login-service
+              name: login-service.login-service.svc.cluster.local
               port:
                 number: 5006
