@@ -9,24 +9,24 @@ spec:
   - host: login-service
     http:
       paths:
-        - path: /kube-node1
+        - path: /login
           pathType: Prefix
           backend:
             service:
-              name: login-service-node1
+              name: login-service
               port:
                 number: 5006
-        - path: /kube-node2
+        - path: /login
           pathType: Prefix
           backend:
             service:
-              name: login-service-node2
+              name: login-service
               port:
                 number: 5006
-        - path: /kube-node3
+        - path: /login
           pathType: Prefix
           backend:
             service:
-              name: login-service-node3
+              name: login-service
               port:
                 number: 5006
