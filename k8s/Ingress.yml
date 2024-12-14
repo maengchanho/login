@@ -17,17 +17,3 @@ spec:
               name: login-service
               port:
                 number: 5006
-        - path: /login
-          pathType: Prefix
-          backend:
-            service:
-              name: login-service
-              port:
-                number: 5006
-        - path: /login
-          pathType: Prefix
-          backend:
-            service:
-              name: login-service
-              port:
-                number: 5006
