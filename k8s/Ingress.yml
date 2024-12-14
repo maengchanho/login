@@ -15,18 +15,18 @@ spec:
             service:
               name: login-service
               port:
-                number: 80
+                number: 5006
         - path: /kube-node2
           pathType: Prefix
           backend:
             service:
               name: login-service
               port:
-                number: 80
+                number: 5006
         - path: /kube-node3
           pathType: Prefix
           backend:
             service:
               name: login-service
               port:
-                number: 80
+                number: 5006
