@@ -2,8 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: login-service
+  namespace: login-service
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: login-service
@@ -17,5 +18,12 @@ spec:
           image: ghcr.io/maengchanho/login-service:latest
           ports:
             - containerPort: 5006
+          resources:
+            requests:
+              cpu: "0.2"
+              memory: "256Mi"
+            limits:
+              cpu: "1"
+              memory: "512Mi"
       imagePullSecrets:
         - name: ghcr-secrets
